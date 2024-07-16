@@ -1,0 +1,20 @@
+<div class="blog-card">
+    @if (post.thumbnail != undefined && post.thumbnail != '') {
+        <img [src]="post.thumbnail" alt="thumbnail">
+    }
+    <div class="blog-card-content">
+        <div class="space-between">
+            <span class="date-added">{{post.date}}</span>
+            <span class="likes">likes: {{likes}}</span>
+        </div>
+        <h2>{{post.title}}</h2>
+        <p>{{post.description}}</p>
+        <div class="space-between">
+            <div class="blog-card-author">
+                <img src="favicon.ico" alt="author">
+                <span>{{post.author}}</span>
+            </div>
+            <span (click)="like()" class="like-btn">like</span>
+        </div>
+    </div>
+</div>

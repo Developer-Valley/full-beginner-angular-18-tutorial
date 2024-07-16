@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
 import { Post } from '../../model/post';
+import { BlogCardComponent } from "../blog-card/blog-card.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [BlogCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  post: Post;
-
-  constructor() {
-    this.post = new Post('ChatGPT 4o is here!', 'New chatGTP is here and it can talk to you just like a human.');
-  }
+  constructor() {}
 }
